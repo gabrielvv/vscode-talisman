@@ -3,11 +3,10 @@ import * as vscode from 'vscode';
 import { TalismanScope, ITalisman } from '../../types';
 import { isValidTalismanFile, configFileExists, getConfig, writeConfigFile } from '../../utils';
 
-const removeScopeConfig = () => vscode.commands.registerCommand('talisman.removeScopeConfig', async () => {
+const removeScopeConfig = async () => {
     if (!vscode.workspace.rootPath) {
         return vscode.window.showErrorMessage('Please open a folder first');
     }
-    
     
     let nextDoc: ITalisman;
     if (await configFileExists()) {
@@ -42,6 +41,6 @@ const removeScopeConfig = () => vscode.commands.registerCommand('talisman.remove
     await writeConfigFile(nextDoc);
     // Display a message box to the user
     vscode.window.showInformationMessage('Scope config removed');
-});
+};
 
 export { removeScopeConfig };

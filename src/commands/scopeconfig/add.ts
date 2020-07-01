@@ -3,7 +3,7 @@ import { TalismanScope, ITalisman } from '../../types';
 import { talismanScopeList } from '../../constants';
 import { isValidTalismanFile, configFileExists, getConfig, writeConfigFile } from '../../utils';
 
-const addScopeConfig = () => vscode.commands.registerCommand('talisman.addScopeConfig', async () => {
+const addScopeConfig = async () => {
     if (!vscode.workspace.rootPath) {
         return vscode.window.showErrorMessage('Please open a folder first');
     }
@@ -36,6 +36,6 @@ const addScopeConfig = () => vscode.commands.registerCommand('talisman.addScopeC
         // Display a message box to the user
         vscode.window.showInformationMessage('Scope config added');
     }
-});
+};
 
 export { addScopeConfig };
