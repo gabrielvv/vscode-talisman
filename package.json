@@ -10,14 +10,20 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:talisman.scopeConfig"
+		"onCommand:talisman.addScopeConfig",
+		"onCommand:talisman.removeScopeConfig"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "talisman.scopeConfig",
-				"title": "create scope config",
+				"command": "talisman.addScopeConfig",
+				"title": "add scope config",
+				"category": "Talisman"
+			},
+			{
+				"command": "talisman.removeScopeConfig",
+				"title": "remove scope config",
 				"category": "Talisman"
 			}
 		]
@@ -45,6 +51,8 @@
 	},
 	"dependencies": {
 		"@types/fs-extra": "^9.0.1",
-		"fs-extra": "^9.0.1"
+		"@types/js-yaml": "^3.12.5",
+		"fs-extra": "^9.0.1",
+		"js-yaml": "^3.14.0"
 	}
 }
