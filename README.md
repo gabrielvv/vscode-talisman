@@ -1,6 +1,6 @@
-# talisman README
+# vscode-talisman
 
-This is the README for your extension "talisman". After writing up a brief description, we recommend including the following sections.
+A vscode extension for [talisman](https://github.com/thoughtworks/talisman)
 
 ## Features
 
