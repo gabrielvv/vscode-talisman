@@ -1,4 +1,4 @@
-# :lock: Talisman
+# Talisman
 
 A vscode extension for [talisman](https://github.com/thoughtworks/talisman)
 
@@ -10,4 +10,3 @@ Talisman must be [installed](https://github.com/thoughtworks/talisman#installati
 
 * add a [language scope](https://github.com/thoughtworks/talisman#ignoring-files-by-specifying-language-scope) to your project
 * remove a language scope
-
