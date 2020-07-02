@@ -1,9 +1,9 @@
-# Change Log
+## 0.0.1 (2020-07-02)
 
-All notable changes to the "talisman" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Features
 
-## [Unreleased]
+* add/remove scope config ([a479cc9](https://github.com/gabrielvv/vscode-talisman/commit/a479cc9105acec385fe11fc606d920854d7b3a55))
 
-- Initial release
+
+

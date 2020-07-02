@@ -1,23 +1,49 @@
 {
-	"name": "talisman-vscode",
+	"name": "vscode-talisman",
 	"displayName": "Talisman",
 	"description": "Talisman integration for Visual Studio Code",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gabrielvv/vscode-talisman"
+	},
+	"homepage": "https://github.com/gabrielvv/vscode-talisman/blob/master/README.md",
 	"version": "0.0.1",
+	"license": "SEE LICENSE IN LICENSE",
+	"publisher": "gabrielvv",
+	"bugs": {
+		"url": "https://github.com/gabrielvv/vscode-talisman/issues",
+		"email": "gabriel.vautrin@protonmail.com"
+	},
 	"engines": {
 		"vscode": "^1.46.0"
 	},
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"git-hooks",
+		"scans",
+		"secrets",
+		"pre-commit",
+		"talisman",
+		"husky"
+	],
 	"activationEvents": [
-		"onCommand:talisman.helloWorld"
+		"onCommand:talisman.addScopeConfig",
+		"onCommand:talisman.removeScopeConfig"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "talisman.helloWorld",
-				"title": "Hello World"
+				"command": "talisman.addScopeConfig",
+				"title": "add scope config",
+				"category": "Talisman"
+			},
+			{
+				"command": "talisman.removeScopeConfig",
+				"title": "remove scope config",
+				"category": "Talisman"
 			}
 		]
 	},
@@ -27,19 +53,37 @@
 		"lint": "eslint src --ext ts",
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
+		"test": "node ./out/test/runTest.js",
+		"deploy": "vsce publish",
+		"postversion": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.46.0",
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
 		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.30.0",
+		"@types/sinon": "^9.0.4",
+		"@types/vscode": "^1.46.0",
 		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"conventional-changelog-cli": "^2.0.34",
+		"cz-conventional-changelog": "^3.2.0",
+		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.1.2",
+		"sinon": "^9.0.2",
 		"typescript": "^3.8.3",
+		"vsce": "^1.77.0",
 		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"@types/fs-extra": "^9.0.1",
+		"@types/js-yaml": "^3.12.5",
+		"fs-extra": "^9.0.1",
+		"js-yaml": "^3.14.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
