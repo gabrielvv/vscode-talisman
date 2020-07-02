@@ -7,7 +7,7 @@
 		"url": "https://github.com/gabrielvv/vscode-talisman"
 	},
 	"homepage": "https://github.com/gabrielvv/vscode-talisman/blob/master/README.md",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"license": "SEE LICENSE IN LICENSE",
 	"publisher": "gabrielvv",
 	"bugs": {
