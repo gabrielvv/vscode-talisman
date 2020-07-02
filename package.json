@@ -2,14 +2,31 @@
 	"name": "vscode-talisman",
 	"displayName": "Talisman",
 	"description": "Talisman integration for Visual Studio Code",
-	"repository": "https://github.com/gabrielvv/vscode-talisman",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gabrielvv/vscode-talisman"
+	},
+	"homepage": "https://github.com/gabrielvv/vscode-talisman/blob/master/README.md",
 	"version": "0.0.1",
-	"license": "MIT",
+	"license": "SEE LICENSE IN LICENSE",
+	"publisher": "gabrielvv",
+	"bugs": {
+		"url": "https://github.com/gabrielvv/vscode-talisman/issues",
+		"email": "gabriel.vautrin@protonmail.com"
+	},
 	"engines": {
 		"vscode": "^1.46.0"
 	},
 	"categories": [
 		"Other"
+	],
+	"keywords": [
+		"git-hooks",
+		"scans",
+		"secrets",
+		"pre-commit",
+		"talisman",
+		"husky"
 	],
 	"activationEvents": [
 		"onCommand:talisman.addScopeConfig",
