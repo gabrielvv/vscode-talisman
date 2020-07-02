@@ -14,7 +14,6 @@ const addScopeConfig = async () => {
         let nextDoc: ITalisman;
         if (await configFileExists()) {
             const doc = await getConfig();
-            console.log('doc', JSON.stringify(doc));
             if (isValidTalismanFile(doc)) {
                 nextDoc = { ...doc };
                 if (doc.scopeconfig && !doc.scopeconfig.find(({ scope }) => scope === pick)) {
@@ -31,7 +30,6 @@ const addScopeConfig = async () => {
             };
         }
         
-        console.log('nextDoc', JSON.stringify(nextDoc));
         await writeConfigFile(nextDoc);
         // Display a message box to the user
         vscode.window.showInformationMessage('Scope config added');
