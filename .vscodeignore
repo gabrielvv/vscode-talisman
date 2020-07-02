@@ -1,6 +1,5 @@
 .vscode/**
 .vscode-test/**
-out/test/**
 src/**
 .gitignore
 vsc-extension-quickstart.md
@@ -10,3 +9,9 @@ vsc-extension-quickstart.md
 **/*.ts
 .talismanrc
 .editorconfig
+
+# webpack
+node_modules
+out/
+webpack.config.js
+
