@@ -1,4 +1,4 @@
-# Talisman for VSCode
+# :lock: Talisman
 
 A vscode extension for [talisman](https://github.com/thoughtworks/talisman)
 
