@@ -29,12 +29,18 @@
 		"husky"
 	],
 	"activationEvents": [
+		"onCommand:talisman.install",
 		"onCommand:talisman.addScopeConfig",
 		"onCommand:talisman.removeScopeConfig"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
+			{
+				"command": "talisman.install",
+				"title": "install",
+				"category": "Talisman"
+			},
 			{
 				"command": "talisman.addScopeConfig",
 				"title": "add scope config",
@@ -83,6 +89,7 @@
 	"dependencies": {
 		"@types/fs-extra": "^9.0.1",
 		"@types/js-yaml": "^3.12.5",
+		"axios": "^0.19.2",
 		"fs-extra": "^9.0.1",
 		"js-yaml": "^3.14.0"
 	},

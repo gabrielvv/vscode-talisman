@@ -32,6 +32,16 @@ const emptyFileIfDocIsEmpty = (doc: ITalisman) => Object.keys(doc).length ? yaml
 
 const writeConfigFile = async (nextDoc: ITalisman) => await fse.writeFile(getConfigFilePath(), emptyFileIfDocIsEmpty(nextDoc));
 
+// TODO
+const isTalismanInstalled = () => {
+    // search $HOME/.talisman/bin
+};
+
+// TODO there is no point using Talisman if git isn't there
+const isGitEnabledDirectory = () => {
+
+};
+
 export {
 	isValidTalismanFile,
 	emptyFileIfDocIsEmpty,

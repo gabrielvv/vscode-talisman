@@ -4,6 +4,21 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "webpack-dev",
+			"type": "npm",
+			"script": "webpack-dev",
+			"problemMatcher": "$tsc-watch",
+			"isBackground": true,
+			"presentation": {
+				"reveal": "never"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "watch",
 			"type": "npm",
 			"script": "watch",
 			"problemMatcher": "$tsc-watch",
@@ -12,7 +27,7 @@
 				"reveal": "never"
 			},
 			"group": {
-				"kind": "build",
+				"kind": "test",
 				"isDefault": true
 			}
 		}

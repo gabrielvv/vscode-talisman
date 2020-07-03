@@ -4,7 +4,8 @@ A vscode extension for [talisman](https://github.com/thoughtworks/talisman)
 
 ## Requirements
 
-Talisman must be [installed](https://github.com/thoughtworks/talisman#installation) on your machine for the command to work.
+* your project must be versioned with [git](https://git-scm.com/)
+* Talisman must be [installed](https://github.com/thoughtworks/talisman#installation) on your machine for the command to work
 
 ## Features
 
